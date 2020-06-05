@@ -1,15 +1,15 @@
 <template>
   <div>
-   <h2>客户详情</h2>
-    客户编号：{{customer.id}}<br />
-    客户名字:{{customer.name}}<br />
-    客户年龄:{{customer.age}}<br />
-    客户性别:{{customer.sex == 0?"男":"女"}}<br />
-    客户邮箱:{{customer.email}}<br />
-    客户电话:{{customer.phone}}<br />
-    客户生日:{{customer.birth}}<br />
-    客户级别:{{customer.level == 0 ? "重要客户":(customer.level==1?"普通客户":"潜在客户")}}<br />
-    <a href="javascript:void(0)" @click="goback()">返回...</a>
+   <center>客户详情</center>
+    <div class="a">客户编号：{{customer.id}}</div>
+    <div class="a">客户名字:{{customer.name}}</div>
+    <div class="a">客户年龄:{{customer.age}}</div>
+    <div class="a">客户性别:{{customer.sex == 0?"男":"女"}}</div>
+    <div class="a">客户邮箱:{{customer.email}}</div>
+    <div class="a">客户电话:{{customer.phone}}</div>
+    <div class="a">客户生日:{{customer.birth}}</div>
+    <div class="a">客户级别:{{customer.level == 0 ? "重要客户":(customer.level==1?"普通客户":"潜在客户")}}</div>
+    <button class="btn-success"  @click="goback()">返回</button>
   </div>
 </template>
 
@@ -51,5 +51,21 @@
   }
 </script>
 
-<style>
+<style scoped>
+  div{
+    background-color: #F9F9F9;
+  }
+ .a{
+   font-size: 20px;
+   color: indigo;
+   margin-left: 100px;
+ }
+ center{
+   font-size: 40px;
+   color: #337AB7;
+ }
+ button{
+   align-content: center;
+   margin-left: 350px;
+ }
 </style>
