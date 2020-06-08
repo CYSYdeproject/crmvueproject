@@ -116,7 +116,7 @@
       </div>
       <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
         <div class="panel-body" style="padding: 0;">
-          <button class="btn btn-info" style="width: 100%;">用户信息</button>
+          <button class="btn btn-info" style="width: 100%;" @click="touser">用户信息</button>
         </div>
       </div>
     </div>
@@ -173,6 +173,14 @@
       },
       toLinkman:function(){
          this.$router.push("/main/linkman");
+      },
+      touser:function(){
+        if(this.user.role==0){
+          this.$router.push("/main/user")
+        }else{
+          alert("您暂无管理权限，请联系管理员")
+        }
+
       },
       logout:function(){
         var obj = this;

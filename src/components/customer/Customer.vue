@@ -12,6 +12,7 @@
               <th>客户性别</th>
               <th>客户年龄</th>
               <th>客户手机号</th>
+              <th>客户级别</th>
               <th>操作</th>
             </tr></thead>
             <tbody>
@@ -21,6 +22,7 @@
               <td>{{c.sex==0?"男":"女"}}</td>
               <td>{{c.age}}</td>
               <td>{{c.phone}}</td>
+              <td>{{c.level==0?"重要客户":(c.level==1?"普通客户":"潜在客户")}}</td>
               <td>
                 <button class="btn-info"><i class="glyphicon glyphicon-wrench" ></i>修改</button>
                 <button class="btn-danger" style="margin-left: 10px;"><i class="glyphicon glyphicon-trash"></i>删除</button>
