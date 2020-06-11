@@ -8,6 +8,12 @@ import Updatepasswordpage from '@/components/customer/Updatepasswordpage'
 import MoreMessage from '@/components/customer/MoreMessage'
 import Addlinkman from '@/components/linkman/Addlinkman'
 import User from '@/components/user/User'
+import Product from '@/components/product/Product'
+import Addproduct from '@/components/product/Addproduct'
+import Buy from '@/components/buy/Buy'
+import Addbuy from '@/components/buy/Addbuy'
+import Updatebuy from '@/components/buy/Updatebuy'
+import Customermaven from '@/components/buy/Customermaven'
 Vue.use(Router)
 
 export default new Router({
@@ -52,6 +58,36 @@ export default new Router({
          name: 'User',
          component:User
        },
+       {
+         path: 'product',
+         name: 'Product',
+         component:Product
+       },
+       {
+         path: 'addproduct',
+         name: 'Addproduct',
+         component:Addproduct
+       },
+       {
+          path: 'buy',
+          name: 'Buy',
+          component:Buy
+              },
+      {
+         path: 'addbuy',
+         name: 'Addbuy',
+         component:Addbuy
+             },
+      {
+                path: 'updatebuy',
+                name: 'Updatebuy',
+                component:Updatebuy
+                    },
+      {
+         path: 'customermaven',
+         name: 'Customermaven',
+         component:Customermaven
+             },
       ]
     }
   ]
