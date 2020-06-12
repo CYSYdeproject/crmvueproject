@@ -82,7 +82,7 @@
         <div class="panel-body" style="padding: 0;">
           <button class="btn btn-info" style="width: 100%;" @click="toproduct">商品信息</button>
           <button class="btn btn-info" style="width: 100%;"@click="tobuy">采购管理</button>
-          <button class="btn btn-info" style="width: 100%;"@click="tomaven">采购退货</button>
+          <button class="btn btn-info" style="width: 100%;"@click="tomaven">购买详情表</button>
         </div>
       </div>
     </div>

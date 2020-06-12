@@ -1,23 +1,23 @@
 <template>
   <div>
-    <center>采购退货表</center>
+    <center>消费出货表</center>
     <table class="table table-hover">
       <thead>
         <tr>
-          <th>退货者姓名</th>
-          <th>退货者等级</th>
-          <th>退货者手机号</th>
+          <th>客户姓名</th>
+          <th>客户等级</th>
+          <th>客户手机号</th>
           <th>货物所在仓库</th>
           <th>购买折扣</th>
         </tr>
       </thead>
         <tbody>
         <tr v-for="d in datas">
-          <td>{{d.c_name}}</td>
-          <td>{{d.c_level}}</td>
-          <td>{{d.c_phone}}</td>
-          <td>{{d.m_mavenname}}</td>
-          <td>{{d.m_discount}}</td>
+          <td>{{d.name}}</td>
+          <td>{{d.level}}</td>
+          <td>{{d.phone}}</td>
+          <td>{{d.maven.mavenname}}</td>
+          <td>{{d.maven.discount}}</td>
         </tr>
      </tbody>
     </table>
