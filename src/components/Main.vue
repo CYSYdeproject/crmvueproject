@@ -47,7 +47,8 @@
         <div class="panel-body" style="padding: 0;">
           <button class="btn btn-info" style="width: 100%;" @click="toCustomer">客户信息</button>
           <button class="btn btn-info" style="width: 100%;" @click="toLinkman">联系人信息</button>
-          <button class="btn btn-info" style="width: 100%;">联系记录</button>
+          <button class="btn btn-info" style="width: 100%;" @click="torecord">联系记录</button>
+
         </div>
       </div>
     </div>
@@ -62,10 +63,10 @@
       </div>
       <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
         <div class="panel-body" style="padding: 0;">
-          <button class="btn btn-info" style="width: 100%;">供应商信息</button>
-          <button class="btn btn-info" style="width: 100%;">检索中心</button>
-          <button class="btn btn-info" style="width: 100%;">渠道管理</button>
-          <button class="btn btn-info" style="width: 100%;">来电管理</button>
+          <button class="btn btn-info" style="width: 100%;" @click="toSuppler">供应商信息</button>
+          <button class="btn btn-info" style="width: 100%;" @click="toRetrieval" >检索中心</button>
+          <button class="btn btn-info" style="width: 100%;" @click="toChannel">渠道管理</button>
+          <button class="btn btn-info" style="width: 100%;" @click="toCall">来电管理</button>
         </div>
       </div>
     </div>
@@ -80,7 +81,7 @@
       </div>
       <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
         <div class="panel-body" style="padding: 0;">
-          <button class="btn btn-info" style="width: 100%;">商品信息</button>
+          <button class="btn btn-info" style="width: 100%;" >商品信息</button>
           <button class="btn btn-info" style="width: 100%;">采购管理</button>
           <button class="btn btn-info" style="width: 100%;">采购退货</button>
         </div>
@@ -98,7 +99,7 @@
       </div>
       <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
         <div class="panel-body" style="padding: 0;">
-          <button class="btn btn-info" style="width: 100%;">日程管理</button>
+          <button class="btn btn-info" style="width: 100%;" >日程管理</button>
           <button class="btn btn-info" style="width: 100%;">通讯录</button>
           <button class="btn btn-info" style="width: 100%;">通讯管理</button>
           <button class="btn btn-info" style="width: 100%;">公告栏</button>
@@ -143,6 +144,7 @@
       }
     },
     mounted:function(){
+     // this.scroll=new Bscroll(this.$refs.wrapper, { mouseWheel: true, click: true, tap: true })
       this.getUser();
     },
     methods:{
@@ -168,9 +170,31 @@
           }
         });
       },
+
+
+      torecord:function(){
+        this.$router.push("/main/record");
+      },
+
+
+      toChannel:function(){
+        this.$router.push("/main/channel");
+      },
+
+      toCall:function(){
+        this.$router.push("/main/call");
+      },
+
+      toRetrieval:function(){
+        this.$router.push("/main/retrieval");
+      },
+
       toCustomer:function(){
         this.$router.push("/main/customer");
       },
+       toSuppler:function(){
+         this.$router.push("/main/suppler");
+       },
       toLinkman:function(){
          this.$router.push("/main/linkman");
       },

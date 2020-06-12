@@ -8,10 +8,24 @@ import Updatepasswordpage from '@/components/customer/Updatepasswordpage'
 import MoreMessage from '@/components/customer/MoreMessage'
 import Addlinkman from '@/components/linkman/Addlinkman'
 import User from '@/components/user/User'
+import Suppler from '@/components/suppler/Suppler'
+import Retrieval from '@/components/suppler/Retrieval'
+import Channel from '@/components/suppler/Channel'
+import Call from '@/components/suppler/Call'
+import Record from '@/components/linkman/Record'
+
+
+
+
+
 Vue.use(Router)
 
 export default new Router({
+
+
   routes: [
+
+
     {
       path: '/',
       name: 'Login',
@@ -37,7 +51,8 @@ export default new Router({
       path: 'updatepasswordpage',
       name: 'Updatepasswordpage',
       component:Updatepasswordpage
-    },{
+    },
+    {
          path: 'moremessage',
          name: 'MoreMessage',
          component:MoreMessage
@@ -52,6 +67,34 @@ export default new Router({
          name: 'User',
          component:User
        },
+        {
+          path: 'suppler',
+          name: 'Suppler',
+          component:Suppler
+        },
+        {
+          path: 'retrieval',
+          name: 'Retrieval',
+          component:Retrieval
+        },
+        {
+          path: 'channel',
+          name: 'Channel',
+          component:Channel
+        },
+        {
+          path: 'call',
+          name: 'Call',
+          component:Call
+        },
+        {
+          path: 'record',
+          name: 'Record',
+          component:Record
+        },
+
+
+
       ]
     }
   ]
