@@ -98,10 +98,10 @@
       </div>
       <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
         <div class="panel-body" style="padding: 0;">
-          <button class="btn btn-info" style="width: 100%;">日程管理</button>
-          <button class="btn btn-info" style="width: 100%;">通讯录</button>
-          <button class="btn btn-info" style="width: 100%;">通讯管理</button>
-          <button class="btn btn-info" style="width: 100%;">公告栏</button>
+          <button class="btn btn-info" style="width: 100%;" @click="toProgramme">日程管理</button>
+          <button class="btn btn-info" style="width: 100%;" @click="toPhone">通讯录</button>
+          <button class="btn btn-info" style="width: 100%;" @click="toFindPhone">通讯管理</button>
+          <button class="btn btn-info" style="width: 100%;" @click="toAds">公告栏</button>
         </div>
       </div>
     </div>
@@ -170,6 +170,18 @@
       },
       toCustomer:function(){
         this.$router.push("/main/customer");
+      },
+      toProgramme:function(){
+        this.$router.push("/main/programme");
+      },
+      toPhone:function(){
+        this.$router.push("/main/phone");
+      },
+      toAds:function(){
+         this.$router.push("/main/ads");
+      },
+      toFindPhone:function(){
+         this.$router.push("/main/findPhone");
       },
       toLinkman:function(){
          this.$router.push("/main/linkman");
