@@ -81,9 +81,11 @@
       </div>
       <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
         <div class="panel-body" style="padding: 0;">
-          <button class="btn btn-info" style="width: 100%;" >商品信息</button>
-          <button class="btn btn-info" style="width: 100%;">采购管理</button>
-          <button class="btn btn-info" style="width: 100%;">采购退货</button>
+
+          <button class="btn btn-info" style="width: 100%;" @click="toproduct">商品信息</button>
+          <button class="btn btn-info" style="width: 100%;"@click="tobuy">采购管理</button>
+          <button class="btn btn-info" style="width: 100%;"@click="tomaven">购买详情表</button>
+
         </div>
       </div>
     </div>
@@ -99,10 +101,11 @@
       </div>
       <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
         <div class="panel-body" style="padding: 0;">
-          <button class="btn btn-info" style="width: 100%;" >日程管理</button>
-          <button class="btn btn-info" style="width: 100%;">通讯录</button>
-          <button class="btn btn-info" style="width: 100%;">通讯管理</button>
-          <button class="btn btn-info" style="width: 100%;">公告栏</button>
+          <button class="btn btn-info" style="width: 100%;" @click="toProgramme">日程管理</button>
+          <button class="btn btn-info" style="width: 100%;" @click="toPhone">通讯录</button>
+          <button class="btn btn-info" style="width: 100%;" @click="toFindPhone">通讯管理</button>
+          <button class="btn btn-info" style="width: 100%;" @click="toAds">公告栏</button>
+
         </div>
       </div>
     </div>
@@ -148,6 +151,9 @@
       this.getUser();
     },
     methods:{
+      tomaven:function(){
+        this.$router.push("/main/customermaven")
+      },
       updatepassword:function(){
         this.$router.push("/updatepasswordpage");
       },
@@ -195,14 +201,36 @@
        toSuppler:function(){
          this.$router.push("/main/suppler");
        },
+
+      toproduct:function(){
+        this.$router.push("/main/product");
+      },
+     
+      toProgramme:function(){
+        this.$router.push("/main/programme");
+      },
+      toPhone:function(){
+        this.$router.push("/main/phone");
+      },
+      toAds:function(){
+         this.$router.push("/main/ads");
+      },
+      toFindPhone:function(){
+         this.$router.push("/main/findPhone");
+      },
+
       toLinkman:function(){
          this.$router.push("/main/linkman");
+      },
+      tobuy:function(){
+        this.$router.push("/main/buy");
       },
       touser:function(){
         if(this.user.role==0){
           this.$router.push("/main/user")
         }else{
-          alert("您暂无管理权限，请联系管理员")
+          alert("您暂无管理权限，请联系管理员");
+          this.$router.push("/main")
         }
 
       },

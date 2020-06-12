@@ -27,6 +27,7 @@
                 <button class="btn-info"><i class="glyphicon glyphicon-wrench" ></i>修改</button>
                 <button class="btn-danger" style="margin-left: 10px;"><i class="glyphicon glyphicon-trash"></i>删除</button>
                 <button class="btn-success" style="margin-left: 10px;" @click="tofindcustomer(c.id)"><i class="fa fa-database" aria-hidden="true"></i>详情</button>
+                
               </td>
             </tr>
          </tbody>
