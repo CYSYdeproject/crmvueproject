@@ -3,15 +3,20 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
- import $ from 'jquery'
+import $ from 'jquery'
 Vue.config.productionTip = false
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.min.js'
 import 'font-awesome/css/font-awesome.min.css'
+import VueLazyLoad from 'vue-lazyload'
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
   components: { App },
   template: '<App/>'
+})
+Vue.use(VueLazyLoad,{
+    error:'./static/error.png',
+    loading:'./static/loading.png'
 })

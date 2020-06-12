@@ -13,6 +13,13 @@ import Phone from '@/components/programme/Phone'
 import Ads from '@/components/programme/Ads'
 import FindPhone from '@/components/programme/FindPhone'
 import Addphone from '@/components/programme/Addphone'
+
+import Product from '@/components/product/Product'
+import Addproduct from '@/components/product/Addproduct'
+import Buy from '@/components/buy/Buy'
+import Addbuy from '@/components/buy/Addbuy'
+import Updatebuy from '@/components/buy/Updatebuy'
+import Customermaven from '@/components/buy/Customermaven'
 Vue.use(Router)
 
 export default new Router({
@@ -84,7 +91,36 @@ export default new Router({
          path: 'addphone',
          name: 'Addphone',
          component:Addphone
-         },
+         },{
+         path: 'product',
+         name: 'Product',
+         component:Product
+       },
+       {
+         path: 'addproduct',
+         name: 'Addproduct',
+         component:Addproduct
+       },
+       {
+          path: 'buy',
+          name: 'Buy',
+          component:Buy
+              },
+      {
+         path: 'addbuy',
+         name: 'Addbuy',
+         component:Addbuy
+             },
+      {
+                path: 'updatebuy',
+                name: 'Updatebuy',
+                component:Updatebuy
+                    },
+      {
+         path: 'customermaven',
+         name: 'Customermaven',
+         component:Customermaven
+             },
        ]
      },
 
